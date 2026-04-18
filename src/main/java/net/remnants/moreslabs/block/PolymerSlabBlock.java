@@ -9,6 +9,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
 import net.remnants.moreslabs.SlabTypes;
 
 public class PolymerSlabBlock extends SlabBlock implements PolymerBlock, BlockWithElementHolder {
@@ -43,6 +44,6 @@ public class PolymerSlabBlock extends SlabBlock implements PolymerBlock, BlockWi
 
     @Override
     public boolean tickElementHolder(ServerLevel level, BlockPos pos, BlockState state) {
-        return false; // No ticking needed; we use notifyUpdate for state changes
+        return false;
     }
 }

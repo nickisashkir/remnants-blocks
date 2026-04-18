@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": ["###"],
+  "key": { "#": "minecraft:obsidian" },
+  "result": { "id": "remnants_blocks:obsidian_slab", "count": 6 }
+}

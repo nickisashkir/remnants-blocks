@@ -7,6 +7,7 @@ import eu.pb4.polymer.virtualentity.api.elements.BlockDisplayElement;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.SlabType;
+import net.minecraft.world.phys.Vec3;
 import net.remnants.moreslabs.SlabTypes;
 import org.joml.Vector3f;
 
@@ -45,16 +46,16 @@ public class SlabDisplayHolder extends ElementHolder {
     private void applyTransform(SlabType type) {
         switch (type) {
             case BOTTOM -> {
-                display.setScale(new Vector3f(1.002f, 0.502f, 1.002f));
-                display.setTranslation(new Vector3f(-0.001f, -0.001f, -0.001f));
+                display.setScale(new Vector3f(1f, 0.5f, 1f));
+                display.setOffset(Vec3.ZERO);
             }
             case TOP -> {
-                display.setScale(new Vector3f(1.002f, 0.502f, 1.002f));
-                display.setTranslation(new Vector3f(-0.001f, 0.499f, -0.001f));
+                display.setScale(new Vector3f(1f, 0.5f, 1f));
+                display.setOffset(new Vec3(0, 0.5, 0));
             }
             case DOUBLE -> {
-                display.setScale(new Vector3f(1.002f, 1.002f, 1.002f));
-                display.setTranslation(new Vector3f(-0.001f, -0.001f, -0.001f));
+                display.setScale(new Vector3f(1f, 1f, 1f));
+                display.setOffset(Vec3.ZERO);
             }
         }
     }

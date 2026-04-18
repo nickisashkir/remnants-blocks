@@ -9,6 +9,8 @@ public enum SlabTypes {
     GRASS_BLOCK("grass_block", Blocks.GRASS_BLOCK, "Grass"),
     PODZOL("podzol", Blocks.PODZOL, "Podzol"),
     AMETHYST_BLOCK("amethyst_block", Blocks.AMETHYST_BLOCK, "Amethyst"),
+    OBSIDIAN("obsidian", Blocks.OBSIDIAN, "Obsidian"),
+    CRYING_OBSIDIAN("crying_obsidian", Blocks.CRYING_OBSIDIAN, "Crying Obsidian"),
     WHITE_CONCRETE("white_concrete", Blocks.WHITE_CONCRETE, "White Concrete"),
     ORANGE_CONCRETE("orange_concrete", Blocks.ORANGE_CONCRETE, "Orange Concrete"),
     MAGENTA_CONCRETE("magenta_concrete", Blocks.MAGENTA_CONCRETE, "Magenta Concrete"),
