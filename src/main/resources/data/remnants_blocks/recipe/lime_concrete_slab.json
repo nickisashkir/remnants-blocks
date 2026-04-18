@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:lime_concrete"
+  },
+  "result": {
+    "id": "remnants_blocks:lime_concrete_slab",
+    "count": 6
+  }
+}

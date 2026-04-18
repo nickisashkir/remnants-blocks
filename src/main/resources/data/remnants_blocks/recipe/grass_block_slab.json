@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:grass_block"
+  },
+  "result": {
+    "id": "remnants_blocks:grass_block_slab",
+    "count": 6
+  }
+}

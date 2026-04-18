@@ -1,0 +1,43 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version '1.15-SNAPSHOT'
+}
+
+version = "${project.mod_version}+${project.minecraft_version}"
+group = project.maven_group
+
+repositories {
+    maven { url 'https://maven.nucleoid.xyz' }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    implementation("eu.pb4:polymer-core:${project.polymer_version}")
+    implementation("eu.pb4:polymer-resource-pack:${project.polymer_version}")
+    implementation("eu.pb4:polymer-resource-pack-extras:${project.polymer_version}")
+    implementation("eu.pb4:polymer-virtual-entity:${project.polymer_version}")
+    implementation("eu.pb4:polymer-autohost:${project.polymer_version}")
+}
+
+processResources {
+    inputs.property "version", rootProject.version
+    inputs.property "minecraft_version", rootProject.minecraft_version
+    inputs.property "loader_version", rootProject.loader_version
+    filteringCharset "UTF-8"
+
+    filesMatching("fabric.mod.json") {
+        expand "version": rootProject.version,
+                "minecraft_version": rootProject.minecraft_version,
+                "loader_version": rootProject.loader_version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release.set(25)
+}
+
+java {
+    withSourcesJar()
+}

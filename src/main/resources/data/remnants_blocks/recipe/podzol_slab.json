@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": ["###"],
+  "key": { "#": "minecraft:podzol" },
+  "result": { "id": "remnants_blocks:podzol_slab", "count": 6 }
+}

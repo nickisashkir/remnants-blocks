@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:cyan_concrete"
+  },
+  "result": {
+    "id": "remnants_blocks:cyan_concrete_slab",
+    "count": 6
+  }
+}

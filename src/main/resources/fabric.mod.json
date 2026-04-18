@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "remnants_blocks",
+  "version": "${version}",
+  "name": "Remnants Building Blocks",
+  "description": "Adds dirt, grass, concrete, amethyst slabs and polished diorite walls via Polymer (server-side only).",
+  "authors": [
+    "The Remnants"
+  ],
+  "license": "MIT",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "net.remnants.moreslabs.MoreSlabs"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": ">=26.1",
+    "fabric-api": "*",
+    "polymer-core": "*",
+    "polymer-resource-pack": "*",
+    "polymer-virtual-entity": "*"
+  }
+}

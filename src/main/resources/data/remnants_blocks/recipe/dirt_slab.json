@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:dirt"
+  },
+  "result": {
+    "id": "remnants_blocks:dirt_slab",
+    "count": 6
+  }
+}
