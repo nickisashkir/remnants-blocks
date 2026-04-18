@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:black_concrete",
+  "result": {
+    "id": "remnants_blocks:black_concrete_slab",
+    "count": 2
+  }
+}

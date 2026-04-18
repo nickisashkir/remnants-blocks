@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:obsidian",
+  "result": {
+    "id": "remnants_blocks:obsidian_slab",
+    "count": 2
+  }
+}

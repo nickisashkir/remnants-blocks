@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "remnants_blocks:dirt_slab",
+    "remnants_blocks:coarse_dirt_slab",
+    "remnants_blocks:grass_block_slab",
+    "remnants_blocks:podzol_slab"
+  ]
+}
