@@ -19,7 +19,7 @@
     "minecraft": ">=26.1",
     "fabric-api": "*",
     "polymer-core": "*",
-    "polymer-resource-pack": "*",
-    "polymer-virtual-entity": "*"
+    "polymer-blocks": "*",
+    "polymer-resource-pack": "*"
   }
 }
