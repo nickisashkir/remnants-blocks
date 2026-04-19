@@ -43,15 +43,17 @@ public class PolymerSlabBlock extends SlabBlock implements PolymerTexturedBlock 
     }
 
     private static BlockState safeRequest(BlockModelType type, Identifier model, String slabId, String variant) {
+        int before = PolymerBlockResourceUtils.getBlocksLeft(type);
         BlockState result = PolymerBlockResourceUtils.requestBlock(type, PolymerBlockModel.of(model));
         if (result == null) {
-            int left = PolymerBlockResourceUtils.getBlocksLeft(type);
-            MoreSlabs.LOGGER.error(
-                    "Polymer pool {} exhausted while requesting variant '{}' for slab '{}'. {} slots remaining.",
-                    type, variant, slabId, left);
-            // Fallback: use stone's default state so nothing NPEs during state cache init.
+            String msg = String.format("[REMNANTS_BLOCKS] POOL EXHAUSTED: %s for slab '%s' variant '%s' (had %d left before request). Falling back to STONE.",
+                    type, slabId, variant, before);
+            MoreSlabs.LOGGER.error(msg);
+            System.err.println(msg);
             return Blocks.STONE.defaultBlockState();
         }
+        MoreSlabs.LOGGER.info("[REMNANTS_BLOCKS] Allocated {} for '{}' variant '{}' ({} -> {} left)",
+                type, slabId, variant, before, PolymerBlockResourceUtils.getBlocksLeft(type));
         return result;
     }
 
