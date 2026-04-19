@@ -6,6 +6,7 @@ import eu.pb4.polymer.blocks.api.PolymerBlockResourceUtils;
 import eu.pb4.polymer.blocks.api.PolymerTexturedBlock;
 import net.fabricmc.fabric.api.networking.v1.context.PacketContext;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.SlabType;
@@ -34,16 +35,24 @@ public class PolymerSlabBlock extends SlabBlock implements PolymerTexturedBlock 
         Identifier topModel = Identifier.fromNamespaceAndPath(MoreSlabs.MODID, "block/" + id + "_top");
         Identifier doubleModel = Identifier.fromNamespaceAndPath(MoreSlabs.MODID, "block/" + id + "_double");
 
-        this.bottomState = PolymerBlockResourceUtils.requestBlock(
-                BlockModelType.SLAB_BOTTOM, PolymerBlockModel.of(bottomModel));
-        this.topState = PolymerBlockResourceUtils.requestBlock(
-                BlockModelType.getSlab(SlabType.TOP, false), PolymerBlockModel.of(topModel));
-        this.bottomWaterloggedState = PolymerBlockResourceUtils.requestBlock(
-                BlockModelType.SLAB_BOTTOM_WATERLOGGED, PolymerBlockModel.of(bottomModel));
-        this.topWaterloggedState = PolymerBlockResourceUtils.requestBlock(
-                BlockModelType.SLAB_TOP_WATERLOGGED, PolymerBlockModel.of(topModel));
-        this.doubleState = PolymerBlockResourceUtils.requestBlock(
-                BlockModelType.FULL_BLOCK, PolymerBlockModel.of(doubleModel));
+        this.bottomState = safeRequest(BlockModelType.SLAB_BOTTOM, bottomModel, id, "bottom");
+        this.topState = safeRequest(BlockModelType.getSlab(SlabType.TOP, false), topModel, id, "top");
+        this.bottomWaterloggedState = safeRequest(BlockModelType.SLAB_BOTTOM_WATERLOGGED, bottomModel, id, "bottom_waterlogged");
+        this.topWaterloggedState = safeRequest(BlockModelType.SLAB_TOP_WATERLOGGED, topModel, id, "top_waterlogged");
+        this.doubleState = safeRequest(BlockModelType.FULL_BLOCK, doubleModel, id, "double");
+    }
+
+    private static BlockState safeRequest(BlockModelType type, Identifier model, String slabId, String variant) {
+        BlockState result = PolymerBlockResourceUtils.requestBlock(type, PolymerBlockModel.of(model));
+        if (result == null) {
+            int left = PolymerBlockResourceUtils.getBlocksLeft(type);
+            MoreSlabs.LOGGER.error(
+                    "Polymer pool {} exhausted while requesting variant '{}' for slab '{}'. {} slots remaining.",
+                    type, variant, slabId, left);
+            // Fallback: use stone's default state so nothing NPEs during state cache init.
+            return Blocks.STONE.defaultBlockState();
+        }
+        return result;
     }
 
     public SlabTypes getSlabType() {
