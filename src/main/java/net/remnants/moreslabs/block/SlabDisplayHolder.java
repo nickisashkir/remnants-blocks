@@ -44,18 +44,20 @@ public class SlabDisplayHolder extends ElementHolder {
     }
 
     private void applyTransform(SlabType type) {
+        // Holder position is at block center (0.5, 0.5, 0.5). Offset by -0.5 in each axis
+        // to anchor the display's render origin at the block corner (0, 0, 0).
         switch (type) {
             case BOTTOM -> {
                 display.setScale(new Vector3f(1f, 0.5f, 1f));
-                display.setOffset(Vec3.ZERO);
+                display.setOffset(new Vec3(-0.5, -0.5, -0.5));
             }
             case TOP -> {
                 display.setScale(new Vector3f(1f, 0.5f, 1f));
-                display.setOffset(new Vec3(0, 0.5, 0));
+                display.setOffset(new Vec3(-0.5, 0, -0.5));
             }
             case DOUBLE -> {
                 display.setScale(new Vector3f(1f, 1f, 1f));
-                display.setOffset(Vec3.ZERO);
+                display.setOffset(new Vec3(-0.5, -0.5, -0.5));
             }
         }
     }
