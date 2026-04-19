@@ -3,7 +3,18 @@
   "values": [
     "remnants_blocks:dirt_slab",
     "remnants_blocks:coarse_dirt_slab",
-    "remnants_blocks:grass_block_slab",
-    "remnants_blocks:podzol_slab"
+    "remnants_blocks:podzol_slab",
+    "remnants_blocks:natural_grass_slab",
+    "remnants_blocks:scarlet_grass_slab",
+    "remnants_blocks:amethyst_grass_slab",
+    "remnants_blocks:mirage_grass_slab",
+    "remnants_blocks:lavender_grass_slab",
+    "remnants_blocks:warped_grass_slab",
+    "remnants_blocks:moonlight_grass_slab",
+    "remnants_blocks:emerald_peaks_grass_slab",
+    "remnants_blocks:sakura_grass_slab",
+    "remnants_blocks:autumn_grass_slab",
+    "remnants_blocks:desert_grass_slab",
+    "remnants_blocks:ashen_grass_slab"
   ]
 }

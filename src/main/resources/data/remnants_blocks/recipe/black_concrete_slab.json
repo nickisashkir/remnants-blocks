@@ -1,14 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "pattern": [
-    "###"
-  ],
-  "key": {
-    "#": "minecraft:black_concrete"
-  },
-  "result": {
-    "id": "remnants_blocks:black_concrete_slab",
-    "count": 6
-  }
+  "pattern": ["###"],
+  "key": { "#": "minecraft:black_concrete" },
+  "result": { "id": "remnants_blocks:black_concrete_slab", "count": 6 }
 }

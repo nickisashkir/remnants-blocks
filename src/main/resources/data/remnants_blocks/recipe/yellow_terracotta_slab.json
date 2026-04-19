@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": ["###"],
+  "key": { "#": "minecraft:yellow_terracotta" },
+  "result": { "id": "remnants_blocks:yellow_terracotta_slab", "count": 6 }
+}

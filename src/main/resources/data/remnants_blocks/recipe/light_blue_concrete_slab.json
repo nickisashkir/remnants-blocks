@@ -1,14 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "pattern": [
-    "###"
-  ],
-  "key": {
-    "#": "minecraft:light_blue_concrete"
-  },
-  "result": {
-    "id": "remnants_blocks:light_blue_concrete_slab",
-    "count": 6
-  }
+  "pattern": ["###"],
+  "key": { "#": "minecraft:light_blue_concrete" },
+  "result": { "id": "remnants_blocks:light_blue_concrete_slab", "count": 6 }
 }

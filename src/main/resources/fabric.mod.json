@@ -3,7 +3,7 @@
   "id": "remnants_blocks",
   "version": "${version}",
   "name": "Remnants Building Blocks",
-  "description": "Adds dirt, grass, podzol, amethyst, obsidian, and all 16 concrete slabs via Polymer (server-side only).",
+  "description": "Adds dirt, grass (12 color variants), podzol, amethyst, obsidian, concrete, and terracotta slabs via Polymer (server-side only). Includes Jade tooltip integration.",
   "authors": [
     "The Remnants"
   ],
@@ -12,6 +12,9 @@
   "entrypoints": {
     "main": [
       "net.remnants.moreslabs.MoreSlabs"
+    ],
+    "jade": [
+      "net.remnants.moreslabs.compat.JadePlugin"
     ]
   },
   "depends": {
@@ -21,5 +24,8 @@
     "polymer-core": "*",
     "polymer-blocks": "*",
     "polymer-resource-pack": "*"
+  },
+  "suggests": {
+    "jade": "*"
   }
 }

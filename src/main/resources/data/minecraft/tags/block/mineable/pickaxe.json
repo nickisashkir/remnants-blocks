@@ -4,6 +4,7 @@
     "remnants_blocks:amethyst_block_slab",
     "remnants_blocks:obsidian_slab",
     "remnants_blocks:crying_obsidian_slab",
+    "remnants_blocks:terracotta_slab",
     "remnants_blocks:white_concrete_slab",
     "remnants_blocks:orange_concrete_slab",
     "remnants_blocks:magenta_concrete_slab",
@@ -19,6 +20,22 @@
     "remnants_blocks:brown_concrete_slab",
     "remnants_blocks:green_concrete_slab",
     "remnants_blocks:red_concrete_slab",
-    "remnants_blocks:black_concrete_slab"
+    "remnants_blocks:black_concrete_slab",
+    "remnants_blocks:white_terracotta_slab",
+    "remnants_blocks:orange_terracotta_slab",
+    "remnants_blocks:magenta_terracotta_slab",
+    "remnants_blocks:light_blue_terracotta_slab",
+    "remnants_blocks:yellow_terracotta_slab",
+    "remnants_blocks:lime_terracotta_slab",
+    "remnants_blocks:pink_terracotta_slab",
+    "remnants_blocks:gray_terracotta_slab",
+    "remnants_blocks:light_gray_terracotta_slab",
+    "remnants_blocks:cyan_terracotta_slab",
+    "remnants_blocks:purple_terracotta_slab",
+    "remnants_blocks:blue_terracotta_slab",
+    "remnants_blocks:brown_terracotta_slab",
+    "remnants_blocks:green_terracotta_slab",
+    "remnants_blocks:red_terracotta_slab",
+    "remnants_blocks:black_terracotta_slab"
   ]
 }

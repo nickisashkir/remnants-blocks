@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:yellow_terracotta",
+  "result": {
+    "id": "remnants_blocks:yellow_terracotta_slab",
+    "count": 2
+  }
+}
